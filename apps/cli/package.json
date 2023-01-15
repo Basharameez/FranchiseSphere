@@ -1,0 +1,21 @@
+{
+  "name": "@threadline/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "threadline": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@threadline/database": "^1.0.0",
+    "@threadline/measurement-engine": "^1.0.0",
+    "commander": "^11.1.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.4"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "threadline-plm",
+  "version": "1.0.0",
+  "description": "Threadline PLM - Fashion, apparel and soft-goods product lifecycle management",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint \"**/*.ts*\"",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "db:generate": "npm run db:generate -w @threadline/database",
+    "db:migrate": "npm run db:migrate -w @threadline/database"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5",
+    "@vitest/coverage-v8": "^2.0.5",
+    "prettier": "^3.3.3",
+    "eslint": "^9.9.0",
+    "@playwright/test": "^1.45.0"
+  }
+}
